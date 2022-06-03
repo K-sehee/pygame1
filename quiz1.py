@@ -40,9 +40,6 @@ enemy_x_pos = randint(0, screen_width - enemy_width)
 enemy_y_pos = 0
 enemy_speed = 10
 
-#폰트정의
-# #시간
-
 running = True
 
 while running:
@@ -80,14 +77,10 @@ while running:
 ##4. 충돌처리
     character_rect = character.get_rect()
     character_rect.left = character_x_pos
-    # character_rect.right = character_x_pos
     character_rect.top = character_y_pos
-    # character_rect.bottom = character_y_pos
 
     enemy_rect = enemy.get_rect()
     enemy_rect.left = enemy_x_pos
-    # enemy_rect.right = enemy_x_pos
-    # enemy_rect.bottom = enemy_y_pos
     enemy_rect.top = enemy_y_pos
 
 
@@ -109,6 +102,5 @@ while running:
     
     pygame.display.update() #화면을 다시 그리기 (반드시 계속 호출)
 
-#끝나기 전 대기
 #종료
 pygame.quit()
